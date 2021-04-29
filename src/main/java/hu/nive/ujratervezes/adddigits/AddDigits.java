@@ -2,22 +2,24 @@ package hu.nive.ujratervezes.adddigits;
 
 public class AddDigits {
 
-    public int addDigits(String input){
+    public int addDigits(String input) {
 
-        if(input.equals("") || input.isBlank()){
+        if (input.equals("") || input.equals(null)) {
             return -1;
         }
 
         int sumDigits = 0;
 
-        for(int i = 0; i < input.length(); i++){
+        for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
-            if(Character.isDigit(c)){
-                sumDigits = sumDigits + i;
+            if (Character.isDigit(c)) {
+                int b = Integer.parseInt(String.valueOf(c));
+                sumDigits = sumDigits + b;
             }
-        }
 
-        return sumDigits;
+        }
+            return sumDigits;
+        }
     }
 
-}
+
